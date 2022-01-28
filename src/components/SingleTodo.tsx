@@ -1,6 +1,13 @@
 import React from 'react';
+import { Todo } from "../model";
 
-function SingleTodo() {
+type Props = {
+    todo: Todo;
+    todos: Todo[];
+    setTodos:React.Dispatch<React.SetStateAction<Todo[]>>;
+};
+
+function SingleTodo( { todo, todos, setTodos }: Props) {
   return (
     <div>
 
