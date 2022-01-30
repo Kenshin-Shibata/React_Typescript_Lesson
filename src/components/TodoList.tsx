@@ -64,6 +64,7 @@ const TodoList: React.FC<Props> = ({
                           />
                         ))
                       }
+                      {provided.placeholder}
                   </div>
           )
         }
