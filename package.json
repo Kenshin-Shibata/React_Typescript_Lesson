@@ -1,4 +1,5 @@
 {
+  "homepage": "https://kenshin-shibata.github.io/React_Typescript_Taskify/",
   "name": "typescript-tutorial",
   "version": "0.1.0",
   "private": true,
@@ -23,7 +24,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "yarn build && gh-pages -d build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -49,6 +50,5 @@
   },
   "devDependencies": {
     "gh-pages": "^3.2.3"
-  },
-  "homepage": "https://kenshin-shibata.github.io/React_Typescript_Taskify/"
+  }
 }
