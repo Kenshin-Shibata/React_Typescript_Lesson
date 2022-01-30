@@ -21,14 +21,20 @@ const App: React.FC = () => {
   const onDragEnd = (result:DropResult) => {
    const { source, destination } = result;
 
-   if(!destination) return;
+   if(!destination) {
+     return;
+    }
 
-   if(destination.droppableId===source.droppableId && destination.index===source.index)
-    return;
+   if(
+      destination.droppableId === source.droppableId && 
+      destination.index === source.index
+      ) {
+      return;
+      }
 
-  let add,
-    active = todos,
-    complete = completedTodos;
+  let add;
+  let active = todos;
+  let complete = completedTodos;
 
   if(source.droppableId === 'TodosList') {
     add = active[source.index];
@@ -51,7 +57,7 @@ const App: React.FC = () => {
   return (
     <DragDropContext onDragEnd={onDragEnd}>
       <div className="App">
-        <span className="heading">Ochinchin</span>
+        <span className="heading">Taskify</span>
         <InputField todo={todo} setTodo={setTodo} handleAdd={handleAdd} />
         <TodoList 
           todos={todos}
